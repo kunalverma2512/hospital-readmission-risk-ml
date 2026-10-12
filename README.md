@@ -103,30 +103,5 @@ python train.py --model xgb --tune-threshold
 
 ---
 
-## 🏗️ Project Architecture
-
-```text
-hospital-readmission-risk-ml/
-├── data/
-│   └── raw/                       # Raw UCI dataset (diabetic_data.csv, IDS_mapping.csv)
-├── models/
-│   └── hospital_readmission_model.pkl # Persisted model bundle (scaler, RFE, XGBoost)
-├── reports/
-│   └── evaluated_model_evaluation_metrics.json # Stored benchmark metrics
-├── src/
-│   ├── config.py                  # Paths, constants, ICD-9 mappings, seed
-│   ├── data_preprocessing.py      # Deceased filtering, patient-level aggregation
-│   ├── feature_engineering.py     # ICD-9 disease clustering, polypharmacy ratios
-│   ├── feature_selection.py       # Stratified split, RFE top-30, ADASYN balancing
-│   ├── models.py                  # Baseline & XGBoost model builders
-│   └── evaluation.py              # Calibration, ROC/PR curves, threshold tuning
-├── train.py                       # End-to-end training CLI
-├── evaluate.py                    # Holdout evaluation CLI
-├── requirements.txt               # Dependencies (scikit-learn, xgboost, imbalanced-learn)
-└── README.md                      # Documentation
-```
-
----
-
 ## 📜 License
 This project is licensed under the MIT License.
