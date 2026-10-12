@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# macOS artifacts
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+
+# Processed intermediate caches (can be regenerated)
+data/processed/
